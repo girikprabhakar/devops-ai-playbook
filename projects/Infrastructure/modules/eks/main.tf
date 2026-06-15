@@ -25,7 +25,7 @@ resource "aws_iam_role_policy_attachment" "cluster_policy" {
 resource "aws_eks_cluster" "eks" {
   name     = var.cluster_name
   role_arn = aws_iam_role.eks_cluster_role.arn
-  version  = "1.34"
+  version  = "1.35"
 
   vpc_config {
     subnet_ids = var.subnet_ids
